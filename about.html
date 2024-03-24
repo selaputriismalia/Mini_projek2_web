@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Sela</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="container4">
+      <div class="left-top">
+        <h2>Hallo! <span>Perkenalkan</span></h2>
+        <h1>Sela Putri Ismalia</h1>
+      </div>
+      <div class="center2">
+        <div class="profile-image2">
+          <img src="akuu3.png" alt="Foto Saya">
+        </div>
+      </div>
+      <div class="right-top2">
+          <div id="darkModeToggle"><img src="matahari.png" alt=""></div>
+          <h2>About <span>me</span></h2>
+          <br>
+          <p>Halo! Perkenalkan, Nama saya Sela Putri Ismalia, seorang mahasiswi semester 4 jurusan Sistem Informasi di salah satu perguruan tinggi ternama di kota Samarinda, Universitas Mulawarman.</p>
+        <button id="moreAboutMeBtn" onclick="scrollToBio()">More About Me</button>
+      </div>
+      <div class="left-bottom2">
+                <a href=https://www.instagram.com/s_selaputri16><img src="ig2.png" alt="Instagram"></a>
+                <a href=https://github.com/selaputriismalia><img src="git2.png" alt="Git Hub"></a>
+                <a href=https://trakteer.id/ItsmeD'ARC/link><img src="trak.png" alt="Trakteer"></a>
+                <a href="#"><img src="in.png" alt="Linked in"></a>
+      </div>
+      <div class="cv" id="cv">
+        <a href="p.pdf" download class="download-button">Download CV</a>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="menu" id="menu">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="skill.html">Skills</a></li>
+                <li><a href="sertifikat.html">Certificates</a></li>
+            </ul>
+        </nav>
+      </div>
+  </section>
+  <section class="container2" id="bioSection">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="about-text">
+      <br>
+      <br>
+      <br>
+      <br>
+      <img src="aku.jpeg" class="profile-img">
+      <div class="biodata">
+        <h3>Biodata :</h3>
+        <ul>
+          <li>Nama: <span>Sela Putri Ismalia</span></li>
+          <br>
+          <li>Tempat, Tanggal Lahir: <span>Samarinda, 16 November 2004</span></li>
+          <br>
+          <li>Telepon: <span>082154221335</span></li>
+          <br>
+          <li>Email: <span>selaaputri2109@gmail.com</span></li>
+          <br>
+          <li>Tempat Tinggal: <span>Kota Samarinda</span></li>
+          <li>Usia: <span>19</span> </li>
+        </ul>
+      </div>
+      <div class="pendidikan">
+        <h3>Pendidikan :</h3>
+        <ul>
+          <h4>2010 - 2016</h4>
+          <li>Sekolah Dasar: SDN 003 Samarinda</li>
+          <br>
+          <h4>2016 - 2019</h4>
+          <li>Sekolah Menengah Pertama: SMP Negri 22 Samarinda</li>
+          <br>
+          <h4>2019 - 2022</h4>
+          <li>Sekolah Menengah Atas: SMK Negri 7 Samarinda</li>
+          <br>
+          <h4>2022 - Sekarang</h4>
+          <li>Perguruan Tinggi: Universitas Mulawarman, Jurusan Sistem Informasi</li>
+
+        </ul>
+        <br>
+        <br>
+        <br>
+        <br>
+      </div>
+    </div>
+    
+  </section>
+
+<script>
+  function scrollToBio() {
+    var element = document.getElementById("bioSection");
+    element.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+  }
+</script>
+
+<script>
+  // Fungsi untuk mengaktifkan mode gelap
+  function enableDarkMode() {
+    document.body.classList.add("dark-mode"); // Tambahkan kelas "dark-mode" ke elemen body
+    localStorage.setItem("theme", "dark"); // Simpan tema yang dipilih ke localStorage
+  }
+
+  // Fungsi untuk menonaktifkan mode gelap
+  function disableDarkMode() {
+    document.body.classList.remove("dark-mode"); // Hapus kelas "dark-mode" dari elemen body
+    localStorage.setItem("theme", "light"); // Simpan tema yang dipilih ke localStorage
+  }
+
+  // Fungsi untuk memilih tema berdasarkan preferensi pengguna atau default
+  function setTheme() {
+    const preferredTheme = localStorage.getItem("theme");
+
+    if (preferredTheme === "dark") {
+      enableDarkMode();
+    } else {
+      disableDarkMode();
+    }
+  }
+
+  // Event listener untuk mengubah mode gelap dan terang ketika tombol ditekan
+  document.addEventListener("DOMContentLoaded", function() {
+    const darkModeToggle = document.getElementById("darkModeToggle");
+
+    darkModeToggle.addEventListener("click", function() {
+      if (document.body.classList.contains("dark-mode")) {
+        disableDarkMode();
+      } else {
+        enableDarkMode();
+      }
+    });
+
+    // Set tema saat halaman dimuat
+    setTheme();
+  });
+</script>
+
+
+</body>
+</html>

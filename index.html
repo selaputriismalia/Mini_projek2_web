@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortofolio Sela</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="container">
+        <div class="header">
+            <div id="darkModeToggle3"><img src="matahari.png" alt=""></div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <h1 class="name">Sela Putri Ismalia</h1>
+            <h2 class="info">Student of Mulawarman University</h2>
+            <div class="social-media">
+                <a href=https://www.instagram.com/s_selaputri16><img src="ig2.png" alt="Instagram"></a>
+                <a href=https://github.com/selaputriismalia><img src="git2.png" alt="Git Hub"></a>
+                <a href=https://trakteer.id/ItsmeD'ARC/link><img src="trak.png" alt="Trakteer"></a>
+                <a href="https://www.linkedin.com/in/sela-putri-ismalia-b404862b9/"><img src="in.png" alt="Linked in"></a>
+            </div>
+        </div>
+        <div class="menu" id="menu">
+            <nav>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="skill.html">Skills</a></li>
+                    <li><a href="sertifikat.html">Certificates</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js"></script>
+    <script>
+        var typed = new Typed('.info', {
+            strings: ['Student of Mulawarman University'],
+            typeSpeed: 50,
+            loop: false 
+        });
+    </script>
+
+<script>
+    // Fungsi untuk mengaktifkan mode gelap
+    function enableDarkMode() {
+      document.body.classList.add("dark-mode"); // Tambahkan kelas "dark-mode" ke elemen body
+      localStorage.setItem("theme", "dark"); // Simpan tema yang dipilih ke localStorage
+    }
+  
+    // Fungsi untuk menonaktifkan mode gelap
+    function disableDarkMode() {
+      document.body.classList.remove("dark-mode"); // Hapus kelas "dark-mode" dari elemen body
+      localStorage.setItem("theme", "light"); // Simpan tema yang dipilih ke localStorage
+    }
+  
+    // Fungsi untuk memilih tema berdasarkan preferensi pengguna atau default
+    function setTheme() {
+      const preferredTheme = localStorage.getItem("theme");
+  
+      if (preferredTheme === "dark") {
+        enableDarkMode();
+      } else {
+        disableDarkMode();
+      }
+    }
+  
+    // Event listener untuk mengubah mode gelap dan terang ketika tombol ditekan
+    document.addEventListener("DOMContentLoaded", function() {
+      const darkModeToggle = document.getElementById("darkModeToggle3");
+  
+      darkModeToggle.addEventListener("click", function() {
+        if (document.body.classList.contains("dark-mode")) {
+          disableDarkMode();
+        } else {
+          enableDarkMode();
+        }
+      });
+  
+      // Set tema saat halaman dimuat
+      setTheme();
+    });
+  </script>
+</body>
+</html>

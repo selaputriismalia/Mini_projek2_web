@@ -1,0 +1,744 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+}
+
+body {
+
+    margin: 0; 
+    padding: 0; 
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    background: linear-gradient(to bottom, #c4dce4, rgb(255, 255, 255));
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; 
+    text-align: center; 
+}
+
+#darkModeToggle3 {
+    cursor: pointer; /* Mengubah kursor menjadi pointer ketika diarahkan ke elemen */
+}
+
+#darkModeToggle3 img {
+    width: 30px; /* Mengatur lebar gambar */
+    height: 30px; /* Mengatur tinggi gambar */
+    filter: brightness(100%); /* Mengatur kecerahan gambar (100% = normal) */
+    transition: filter 0.5s ease;
+    margin-left: 150%;
+     /* Menambahkan efek transisi untuk perubahan kecerahan */
+}
+
+/* Gaya gambar dalam mode gelap */
+.dark-mode #darkModeToggle3 img {
+    filter: brightness(50%); /* Mengurangi kecerahan gambar dalam mode gelap */
+}
+
+.dark-mode .container {
+    background: linear-gradient(to bottom, #222, #444); /* Ubah warna latar belakang dalam mode gelap */
+    color: #ddd; /* Ubah warna teks dalam mode gelap */
+}
+.name {
+    font-size: 3rem; 
+    color: rgb(14, 110, 255);
+    font-family: Typo Formal Demo;
+}
+
+.info {
+    font-size: 1.5rem;
+    color: rgb(232, 130, 5); 
+    font-family: Typo Formal Demo;
+    overflow: hidden; 
+    border-right: .15em solid orange; 
+    white-space: nowrap; 
+    width: 0; 
+    animation: typing 8s steps(20, end) infinite; 
+}
+
+@keyframes typing {
+    0% { width: 0; }
+    90% { width: 100%; }
+    100% { width: 100%; }
+}
+
+.menu {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    z-index: 1000; 
+    transition: top 0.3s ease; 
+}
+
+
+
+.menu nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px; }
+
+
+.menu nav ul li a {
+    text-decoration: none;
+    color: rgb(16, 89, 197);
+    font-weight: bold;
+    padding: 10px 20px; 
+    border: 2px solid #0365ed; 
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    background-color: rgb(255, 237, 237); 
+}
+
+.menu nav ul li a:hover {
+    background-color: rgb(232, 130, 5); 
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);}
+
+.menu.active {
+    top: -60px; 
+}
+
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.social-media a {
+    margin: 10px 10px;
+    text-decoration: none;
+}
+
+.social-media img {
+    width: 45px; 
+    height: 45px;
+}
+
+@media (max-width: 768px) {
+    .name {
+        font-size: 2rem;
+    }
+    
+    .info {
+        font-size: 1.2rem;
+    }
+    
+    .social-media img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* _________________________________________________________________________________ */
+
+
+.container2 {
+    background: linear-gradient(to bottom, #c4dce4, rgb(255, 255, 255));
+    height: 80%;
+    max-width: 100%; 
+    margin: 0 auto; 
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto auto;
+    grid-gap: 20px;
+    padding: 30px;
+
+
+}
+.container4 {
+    max-width: 85%; 
+    margin: 0 auto; 
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto auto;
+    grid-gap: 30px;
+    padding: 30px;
+  }
+  
+
+
+  /* style.css */
+
+#darkModeToggle {
+    cursor: pointer; /* Mengubah kursor menjadi pointer ketika diarahkan ke elemen */
+}
+
+#darkModeToggle img {
+    width: 30px; /* Mengatur lebar gambar */
+    height: 30px; /* Mengatur tinggi gambar */
+    filter: brightness(100%); /* Mengatur kecerahan gambar (100% = normal) */
+    transition: filter 0.5s ease;
+    margin-left: 80%;
+     /* Menambahkan efek transisi untuk perubahan kecerahan */
+}
+
+/* Gaya gambar dalam mode gelap */
+.dark-mode #darkModeToggle img {
+    filter: brightness(50%); /* Mengurangi kecerahan gambar dalam mode gelap */
+}
+
+
+
+.dark-mode .container2 {
+    background: linear-gradient(to bottom, #222, #444); /* Ubah warna latar belakang dalam mode gelap */
+    color: #ddd; /* Ubah warna teks dalam mode gelap */
+}
+
+.dark-mode .container4 {
+    background: linear-gradient(to bottom, #444, #222); /* Ubah warna latar belakang dalam mode gelap */
+    color: #ddd; /* Ubah warna teks dalam mode gelap */
+}
+
+
+/* style.css */
+.dark-mode {
+    background: linear-gradient(to bottom, #444, #222); /* Ubah warna latar belakang dalam mode gelap */
+    color: #ddd; /* Ubah warna teks dalam mode gelap */
+}
+
+
+.dark-mode .container4 p{
+    color: #fff;
+}
+.left-top {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.left-bottom2 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+.left-bottom2 img {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    margin-top: -100px;
+}
+
+.left-top h2{
+    color: rgb(12, 131, 205);
+    
+    font-family: Minimalist;
+    margin-top: 5%;
+    font-size: xx-large;
+}
+
+.left-top h1{
+    color: rgba(205, 157, 12, 0.607);
+    font-family: Cambria;
+    font-size: 45px;
+}
+
+.center2 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    text-align: center;
+    margin-top: 250px; 
+}
+
+.center2 img {
+    width: 170px;
+    height: 230px; /* Menyesuaikan tinggi agar foto lebih bulat */
+    border-radius: 50%;
+    box-shadow: 8px 8px 8px  rgb(205, 157, 12);
+    margin-bottom: -20%;
+
+}
+
+.dark-mode .container2 .center2{
+    filter: brightness(0) invert(1);
+    background-color: #fff;
+}
+
+.right-top2 {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+}
+
+
+.right-top2 h2{
+    color: #0077ff;
+    text-align: right;
+    margin-top: 8%;
+    right: 5%;
+    font-family: Century725 Cn BT;
+    font-size: 50px
+}
+.right-top2 span {
+    color: #f3aa00e1;
+}
+
+.right-top2 p{
+    padding-left: 50%;
+    text-align: right;
+    position: absolute;
+    right: 5%;
+    color: rgb(93, 90, 90);
+    font-family: Century725 Cn BT;
+    font-size:medium;
+}
+#moreAboutMeBtn {
+    display: block; 
+    margin: 20px auto; 
+    margin-top: 40%;
+
+   
+}
+#moreAboutMeBtn {
+    background-color: #d05f14b5;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#moreAboutMeBtn:hover {
+    background-color: #0056b3;
+}
+
+
+.cv h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #fff; 
+}
+
+.download-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; 
+    color: #fff; 
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    bottom: 80px;
+    right: 80px;
+}
+
+.download-button:hover {
+    background-color: #0056b3; 
+}
+
+
+@media screen and (max-width: 768px) {
+    .left-top h2{
+        font-size: 3vw; 
+    }
+
+    .left-top h1{
+        font-size: 3.5vw; 
+    }
+
+    .center2 {
+        margin-top: 10vh; 
+    }
+
+    .center2 img {
+        width: 20vw; 
+        height: 20vh; 
+        margin-bottom: -5vh; 
+        margin-top: 100%
+    }
+
+    .right-top2 h2{
+        font-size: 4vw; 
+        margin-top: 5vw;}
+
+    .right-top2 p{
+        font-size: 1.5vw; 
+    }
+
+    #moreAboutMeBtn {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 200%
+    }
+
+    .download-button {
+        padding: 1vw 2vw; 
+        bottom: 8vh; 
+        right: 8vw;
+        margin-bottom: 15%;
+        display: flex;
+    }
+
+    .left-bottom2 img{
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        
+    }
+}
+
+  
+
+/* ------------------------------------------------------------------------------------------- */
+
+
+  
+.about-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 85vw; 
+}
+
+.profile-img {
+    width: 20%; 
+    height: auto; 
+    border-radius: 50%; 
+    margin-top: 12%;
+    margin-right: 5%;
+}
+
+.biodata,
+.pendidikan {
+    margin-left: 20px;
+    width: 40%; 
+}
+
+.biodata h3,
+.pendidikan h3 {
+    border-bottom: 3px solid rgb(233, 160, 4);
+    display: inline-block;
+    font-size: 4vw; 
+    font-family: Aptos Narrow;
+    color: #007bff;
+    margin-top: 4vw; }
+
+.biodata h3::after,
+.pendidikan h3::after {
+    content: '\00a0'; 
+}
+
+.biodata ul,
+.pendidikan ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1.7vw;
+    margin-top: 2vw; 
+    font-family: Aptos Narrow;
+}
+
+.biodata ul li,
+.pendidikan ul li {
+    margin-bottom: 1vw; 
+}
+
+.pendidikan ul h4 {
+    font-size: 1.4vw; 
+    color: #666;
+    font-family: Cambria;
+}
+
+.biodata ul li::before,
+.pendidikan ul li::before {
+    content: '• ';
+    color: #ff1900; 
+    font-weight: bold;
+    animation: shine 2s infinite alternate; 
+}
+
+@keyframes shine {
+    0% {
+        color: #ff0000; 
+        text-shadow: 0 0 8.5vw #ff0000, 0 0 8.5vw #ff0000; 
+    }
+    100% {
+        color: #ffff66; 
+        text-shadow: 0 0 8.5vw #ffff66, 0 0 8.5vw #ffff66; 
+    }
+}
+
+
+  
+/* ___________________________________________________________________________________________________________ */
+
+.skills {
+    color: rgb(232, 130, 5);
+    padding: 50px 20px; 
+    text-align: center;
+}
+
+.skills-content {
+    max-width: 800px; 
+    margin: 0 center; 
+}
+
+.skills h2{
+    color: #dcbc08;
+    font-size: 50px;
+}
+
+.skil-kotak{
+    color: white;
+    font-size: 25px;
+}
+
+.skill-item {
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.skill-item h3 {
+    font-size: 100px;
+    margin-bottom: 10px;
+}
+
+.skill-item p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.skil-bar {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+}
+
+.skil-bar p {
+    text-align: left;
+}
+
+.skill-box {
+    text-align: right; 
+    width: 100%; 
+    background-color: white;
+    padding: 5px; 
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(24, 23, 23, 0.1);
+}
+
+.html {
+    width: 40%; 
+    background-color: rgb(232, 130, 5);
+}
+
+.OFICE{
+    width: 80%; 
+    background-color: rgb(232, 130, 5);
+}
+.public{
+    width: 60%; 
+    background-color: rgb(232, 130, 5);
+}
+
+.desain{
+    width: 75%;
+    background-color: rgb(232, 130, 5);
+}
+
+.photo{
+    width: 50%; 
+    background-color: rgb(232, 130, 5);
+}
+
+.python{
+    width: 40%; 
+    background-color: rgb(232, 130, 5);
+}
+.CSS{
+    width: 40%; 
+    background-color: rgb(232, 130, 5);
+}
+.java{
+    width: 40%; 
+    background-color: rgb(232, 130, 5);
+}
+.c{
+    width: 40%; 
+    background-color: rgb(232, 130, 5);
+}
+.sql{
+    width: 60%; 
+    background-color: rgb(232, 130, 5);
+}
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+}
+
+
+
+@media (max-width: 768px) {
+    .skill-item {
+        width: 100%; 
+    }
+}
+
+
+.card{
+    height: auto;
+    width: 650px;
+    padding: 20px 35px;
+    background: #507a8cb7;
+    border-radius: 20px;
+    margin: 15px;
+    padding: relative;
+    overflow: hidden;
+    text-align: center;
+    border: 2px solid rgb(246, 195, 8);
+}
+
+.certificates{
+    background: linear-gradient(to bottom, #c4dce4, rgb(255, 255, 255));
+    
+}
+
+.dark-mode .certificates {
+    background: linear-gradient(to bottom, #222, #444); /* Ubah warna latar belakang dalam mode gelap */
+    color: #ddd; /* Ubah warna teks dalam mode gelap */
+}
+
+
+/* style.css */
+.dark-mode {
+    background: linear-gradient(to bottom, #444, #222); /* Ubah warna latar belakang dalam mode gelap */
+    color: #ddd; /* Ubah warna teks dalam mode gelap */
+}
+
+
+.image-container {
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px; 
+    box-sizing: border-box; 
+    margin-right: 10%;
+    margin-left: 10%;
+
+    
+}
+
+.image-wrapper {
+    position: relative;
+    margin: 10px; 
+    width: calc(33.33% - 20px); 
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: auto;
+    transition: filter 0.3s ease; 
+}
+
+.image-wrapper:hover img {
+    filter: blur(3px); 
+}
+
+.certificates-content h2{
+    color: #0077ff;
+    text-align: center;
+    font-family: Arial Black;
+    font-size: 50px
+
+}
+
+.certificates-content span{
+    color: #d49a06cf;
+    font-family: Arial Black;
+   
+}
+
+.image-text {
+    position: absolute;
+    top: 35%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3vw; 
+    font-weight: bold;
+    text-align: center;
+    background-color: rgba(73, 71, 71, 0.487);
+    padding: 2% 10%; 
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease; 
+}
+
+@media (max-width: 768px) {
+    .image-text {
+        font-size: 1vw; 
+        padding: 4% 10%; 
+    }
+}
+
+@media (max-width: 480px) {
+    .image-text {
+        font-size: 1vw; 
+        padding: 6% 10%; }
+}
+
+
+.image-wrapper:hover .image-text {
+    opacity: 1; /
+}
+
+.fullscreen {
+    position: fixed;
+    top: 10%;
+    left: 10%;
+    width: 90%;
+    height: 90%;
+    z-index: 9999;
+    object-fit: contain; 
+    background-color: rgba(165, 165, 165, 0.9); 
+    cursor: pointer;
+}
+
+.exit-fullscreen-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10000;
+    cursor: pointer;
+    color: rgb(249, 4, 4);
+    font-size: 24px;
+}
+
+.image-wrapper img {
+    width: 80%;
+    height: 80%;
+    transition: filter 0.3s ease; 
+}
+
+.image-wrapper:hover img {
+    filter: none; 
+}
+
+.image-wrapper.fullscreen img {
+    transform: scale(0.9);
+    filter: none; }

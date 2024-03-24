@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sertifikat Sela</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <div class="menu" id="menu">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="skill.html">Skills</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <section class="certificates" id="certificates">
+        <div class="certificates-content">
+            <br>
+            <br>
+            <br>
+            <h2>Certifi<span>cates</span></h2>
+            <div id="darkModeToggle"><img src="matahari.png" alt=""></div>
+            <div class="image-container">
+                <div class="image-wrapper">
+                    <img src="1.png" alt="Teks untuk gambar 1">
+                    <div class="image-text">Database</div>
+                </div>
+                <div class="image-wrapper">
+                    <img src="2.png" alt="Teks untuk gambar 2">
+                    <div class="image-text">Database</div>
+                </div>
+                <div class="image-wrapper">
+                    <img src="3.jpeg" alt="Teks untuk gambar 3">
+                    <div class="image-text">PKL</div>
+                </div>
+                <div class="image-wrapper">
+                    <img src="4.jpeg" alt="Teks untuk gambar 4">
+                    <div class="image-text">Website</div>
+                </div>
+                <div class="image-wrapper">
+                    <img src="5.jpeg" alt="Teks untuk gambar 5">
+                    <div class="image-text">Teater</div>
+                </div>
+                <div class="image-wrapper">
+                    <img src="6.png" alt="Teks untuk gambar 5">
+                    <div class="image-text">Huawei</div>
+                </div>
+            </div>
+        </div>
+    
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+        const imageWrappers = document.querySelectorAll('.image-wrapper');
+    
+        imageWrappers.forEach(function (wrapper) {
+            const image = wrapper.querySelector('img');
+            const imageText = wrapper.querySelector('.image-text');
+    
+
+            image.addEventListener('click', function () {
+                toggleFullScreen(image);
+            });
+    
+            imageText.addEventListener('click', function () {
+                toggleFullScreen(image);
+            });
+        });
+    
+        function toggleFullScreen(element) {
+            element.classList.toggle('fullscreen');
+    
+            if (element.classList.contains('fullscreen')) {
+                const exitFullscreenButton = document.createElement('div');
+                exitFullscreenButton.innerHTML = '&#x2716;'; 
+                exitFullscreenButton.className = 'exit-fullscreen-button';
+                document.body.appendChild(exitFullscreenButton);
+                exitFullscreenButton.addEventListener('click', function () {
+                    element.classList.remove('fullscreen');
+                    exitFullscreenButton.remove();
+                });
+            } else {
+                const exitFullscreenButton = document.querySelector('.exit-fullscreen-button');
+                if (exitFullscreenButton) {
+                    exitFullscreenButton.remove();
+                }
+            }
+        }
+    });
+        </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+        const imageWrappers = document.querySelectorAll('.image-wrapper');
+    
+        imageWrappers.forEach(function (wrapper) {
+            const image = wrapper.querySelector('img');
+    
+            image.addEventListener('click', function () {
+                if (!image.classList.contains('fullscreen')) {
+                    image.classList.add('fullscreen');
+                    const exitFullscreenButton = document.createElement('div');
+                    exitFullscreenButton.innerHTML = '&#x2716;';
+                    exitFullscreenButton.className = 'exit-fullscreen-button';
+                    document.body.appendChild(exitFullscreenButton);
+                    exitFullscreenButton.addEventListener('click', function () {
+                        image.classList.remove('fullscreen');
+                        exitFullscreenButton.remove(); 
+                    });
+                }
+            });
+        });
+    });
+    
+        </script>
+
+    </section>
+
+     <script>
+        // Fungsi untuk mengaktifkan mode gelap
+        function enableDarkMode() {
+          document.body.classList.add("dark-mode"); // Tambahkan kelas "dark-mode" ke elemen body
+          localStorage.setItem("theme", "dark"); // Simpan tema yang dipilih ke localStorage
+        }
+      
+        // Fungsi untuk menonaktifkan mode gelap
+        function disableDarkMode() {
+          document.body.classList.remove("dark-mode"); // Hapus kelas "dark-mode" dari elemen body
+          localStorage.setItem("theme", "light"); // Simpan tema yang dipilih ke localStorage
+        }
+      
+        // Fungsi untuk memilih tema berdasarkan preferensi pengguna atau default
+        function setTheme() {
+          const preferredTheme = localStorage.getItem("theme");
+      
+          if (preferredTheme === "dark") {
+            enableDarkMode();
+          } else {
+            disableDarkMode();
+          }
+        }
+      
+        // Event listener untuk mengubah mode gelap dan terang ketika tombol ditekan
+        document.addEventListener("DOMContentLoaded", function() {
+          const darkModeToggle = document.getElementById("darkModeToggle");
+      
+          darkModeToggle.addEventListener("click", function() {
+            if (document.body.classList.contains("dark-mode")) {
+              disableDarkMode();
+            } else {
+              enableDarkMode();
+            }
+          });
+      
+          // Set tema saat halaman dimuat
+          setTheme();
+        });
+      </script>
+</body>
+</html>
